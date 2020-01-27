@@ -7,6 +7,12 @@ assert sys.version_info >= (3,7), "This script requires at least Python 3.7"
 game_file = 'zork.json'
 item_file = 'items.json'
 
+def update(game,current,choice):
+    c = game[current]
+    for e in c["exits"]:
+        if choice == e["exit"]:
+            return e["target"]
+    return current
 
 # Load the contents of the files into the game and items dictionaries. You can largely ignore this
 # Sorry it's messy, I'm trying to account for any potential craziness with the file location
@@ -26,6 +32,10 @@ def main():
     end_game = ['END']  # Any of the end-game locations
 
     (game,items) = load_files()
+
+    quit = False
+    while not quit:
+
 
     # Add your code here
 
