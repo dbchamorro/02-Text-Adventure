@@ -66,8 +66,6 @@ def main():
         current = update(game,current,response)
     print("Thanks for playing")
 
-    # Add your code here
-
 # run the main function
 if __name__ == '__main__':
 	main()
