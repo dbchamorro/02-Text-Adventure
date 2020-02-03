@@ -50,27 +50,97 @@
     },
     "PARKL":{
         "name": "PARKING LOT",
-        "desc": "You are outside of the hospital in the parking lot. The atmosphere feels off and the city is quiet. \nYou get in your car and drive towards home. \nHome is ahead, there is a supermarket on the way.",
+        "desc": "You are outside of the hospital in the parking lot. The atmosphere feels off and the city is quiet. \nYou get in your car and drive towards home. \nYour house is ahead, there is a supermarket on the way.",
         "exits": [{
             "exit": "HOUSE",
             "target": "HOME"
         }, {
             "exit": "SUPERMARKET",
             "target": "STORE"
+        }, {
+            "exit":"NORTH",
+            "target":"HOME"
         }],
         "items":[]
     },
     "HOME":{
         "name": "HOUSE",
-        "desc": "As you drive through the city, there are signs of a massive emergency. \nThe tv is on when you arrive and you hear that there has been an outbreak that has caused the population to turn into zombies. \nYou have all the supplies to barricade your house. \nThere is a call on your radio for a survior community in the woods.",
+        "desc": "As you drive through the city, there are signs of a massive emergency. \nThe tv is on when you arrive and you hear that there has been an outbreak that has caused the population to turn into zombies. \nYou have enough supplies to barricade your house, couldnt hurt to grab more. \nThere is a message over your radio saying a survior community is in the woods.",
         "exits": [{
             "exit":"BARRICADE",
             "target": "BUNKER"
         }, {
             "exit": "FOREST",
             "target": "FRST"
+        }, {
+            "exit": "SUPERMARKET",
+            "target": "STORE"
+        }],
+        "items":[]
+
+    },
+    "FRST":{
+        "name":"FOREST COMMUNITY",
+        "desc":"You made it to the forest sanctuary. \nAfter months, the community has grown and there are now teams who undergo missions to find the cure (you can help you know). ",
+        "exits":[{
+            "exit":"HELP",
+            "target":"GOVTB"
+        }],
+        "items":[]
+
+    },
+    "BUNKER":{
+        "name":"BUNKER",
+        "desc":"",
+        "exits":[{
+            "exit":"",
+            "target":""
         }]
 
+    },
+    "STORE":{
+        "name": "SUPERMARKET",
+        "desc": "The supermarket is in pretty bad shape,it had been ravaged. \nThere are also weird creatures roaming near the front of the store.  \nThere is an area in the back store for outdoor gear that could be useful. \nBackroom has even more stuff, just so you know.",
+        "exits":[{
+            "exit":"EXIT",
+            "target": "STREET"
+        }, {
+            "exit":"BACK",
+            "target": "STREET"
+        }, {
+            "exit":"BACKROOM",
+            "target":"BACKROOM"
+        
+        }],
+        "items":[{
+            "item":"MACHETE",
+            "desc":"There is a machete over with the gardening tools.",
+            "take":"You take the machete off the wall."
+        }, {
+            "item":"FOOD",
+            "desc":"Its a store, there's food.",
+            "take":"You get some groceries, to take home with you."
+        },{
+            "item":"MEDICINE",
+            "desc":"There is also all purpose medicine. I mean you were in a hospital for some unknown reason.",
+            "take":"The day seems off, good to stock up right now."
+        }]
+    },
+    "STREET":{
+        "name":"CALLE",
+        "desc":"Your back on the same street, your house isnt to far.",
+        "exits":[{
+            "exit":"NORTH",
+            "target":"HOME"
+        }],
+        "items":[]
+    },
+    "BACKROOM":{
+        "name":"STORAGE",
+        "desc":"You got greedy which made you distracted, you were killed by one of the roaming creatures.",
+        "exits":[{
+            "exit":""
+        }]
     }
 
 }

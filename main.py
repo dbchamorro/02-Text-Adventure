@@ -6,6 +6,7 @@ assert sys.version_info >= (3,7), "This script requires at least Python 3.7"
 # The game and item description files (in the same folder as this script)
 game_file = 'zork.json'
 item_file = 'items.json'
+current = ['BUNKER','BACKROOM','ZOMROOM']
 
 def load_files():
     try:
@@ -56,7 +57,7 @@ def main():
         render(game,current)
         for e in end_game:
             if current == e:
-                print("You win")
+                print("GAME OVER")
                 break
 
         response = get_input()
