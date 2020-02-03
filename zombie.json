@@ -1,0 +1,76 @@
+{
+    "HOSP": {
+        "name": "Hospital",
+        "desc": "You wake up in an eerie hospital bed. \nThere is a window to your left \nand a door in front of you.",
+        "exits": [{
+            "exit": "WINDOW",
+            "target": "HOSPW"
+
+        }, {
+            "exit":"DOOR",
+            "target": "HOSPD"
+
+        }],
+        "items": []
+    },
+
+    "HOSPW":{
+        "name": "WINDOW",
+        "desc": "You see an abandoned city and below the window a parking lot.",
+        "exits": [{
+            "exit": "DOOR",
+            "target": "HOSPD"
+
+        }],
+        "items": []
+    },
+    "HOSPD":{
+        "name": "DOOR",
+        "desc": "You made it to the hallway. \nInfront of you is the exit to the parking lot. \nThere is a strange noise coming from the room to your right. ",
+        "exits": [{
+            "exit":"PARKING LOT",
+            "target": "PARKL"
+        }, {
+            "exit":"RIGHT",
+            "target": "ZOMROOM"
+        }],
+        "items": [
+            {
+                "item": "BATON",
+                "desc": "There is a baton leaning against the door.",
+                "take": "You take the baton near the door."
+             }
+        ]
+    },
+    "ZOMROOM":{
+        "name": "HOSPITAL ROOM",
+        "desc": "You are attacked by a zombie like creature and die.",
+        "exits": [],
+        "items": []
+    },
+    "PARKL":{
+        "name": "PARKING LOT",
+        "desc": "You are outside of the hospital in the parking lot. The atmosphere feels off and the city is quiet. \nYou get in your car and drive towards home. \nHome is ahead, there is a supermarket on the way.",
+        "exits": [{
+            "exit": "HOUSE",
+            "target": "HOME"
+        }, {
+            "exit": "SUPERMARKET",
+            "target": "STORE"
+        }],
+        "items":[]
+    },
+    "HOME":{
+        "name": "HOUSE",
+        "desc": "As you drive through the city, there are signs of a massive emergency. \nThe tv is on when you arrive and you hear that there has been an outbreak that has caused the population to turn into zombies. \nYou have all the supplies to barricade your house. \nThere is a call on your radio for a survior community in the woods.",
+        "exits": [{
+            "exit":"BARRICADE",
+            "target": "BUNKER"
+        }, {
+            "exit": "FOREST",
+            "target": "FRST"
+        }]
+
+    }
+
+}
