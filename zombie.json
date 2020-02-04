@@ -81,20 +81,48 @@
     },
     "FRST":{
         "name":"FOREST COMMUNITY",
-        "desc":"You made it to the forest sanctuary. \nAfter months, the community has grown and there are now teams who undergo missions to find the cure (you can help you know). ",
+        "desc":"You made it to the forest sanctuary. \nAfter months, the community has grown and \nthere are now teams who undergo missions to find the cure (you can help you know). \nWith all these missions, there is a need for a leader. ",
         "exits":[{
             "exit":"HELP",
             "target":"GOVTB"
+        }, {
+            "exit": "STAY",
+            "target": "FRSTDEST"
         }],
         "items":[]
 
     },
-    "BUNKER":{
-        "name":"BUNKER",
-        "desc":"",
+    "GOVTB":{
+        "name":"GOVENMENT FACILITY",
+        "desc":"You decided to tag along on one of the missions. \nBeing the technical genius you are, you have to rig up the machine that administers the cure. \nThe mission is succssful. You helped saved the world!",
         "exits":[{
             "exit":"",
-            "target":""
+            "target":"WON"
+        }]
+
+    },
+    "WON":{
+        "name":"COMPLETE",
+        "desc":"Thanks for playing.",
+        "exits":[],
+        "items":[]
+    },
+    "FRSTDEST":{
+        "name":"COMMUNITY COLLAPSE",
+        "desc":"Over the course of weeks, the lack of leadership too often causes a breakdown in social hierarchy. \nThe lax of security also causes a week boarder that leads to the infestation of zombies. The village is no more. ",
+        "exits":[{
+            "exit":[]
+        }],
+        "items":[]
+    },
+    "BUNKER":{
+        "name":"BUNKER",
+        "desc":"You had a bunker set up for this exact scenario. \n",
+        "exits":[],
+        "items":[{
+            "item":"NOTE",
+            "desc": "There is a note on the door.",
+            "take": "Its a note from yourself saying. 'Dont forget to restock the bunker, you never know!' Uh oh. "        
         }]
 
     },

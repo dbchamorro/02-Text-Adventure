@@ -6,7 +6,7 @@ assert sys.version_info >= (3,7), "This script requires at least Python 3.7"
 # The game and item description files (in the same folder as this script)
 game_file = 'zork.json'
 item_file = 'items.json'
-current = ['BUNKER','BACKROOM','ZOMROOM']
+current = ['BUNKER','BACKROOM','ZOMROOM','FRSTDEST']
 
 def load_files():
     try:
